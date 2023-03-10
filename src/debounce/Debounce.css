@@ -1,0 +1,26 @@
+.contact {
+  /* float: right; */
+  /* margin: 2% 20% 4% 30%; */
+  /* margin: auto; */
+  padding: 2% 4%;
+  border-radius: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  height: 400px;
+}
+.contact__detail {
+  display: flex;
+  column-gap: 20px;
+  float: left;
+}
+.contact__userimg {
+  width: 100%;
+  height: 280px;
+  border-radius: 15%;
+}
+.contact__description {
+  margin-top: 7%;
+}
