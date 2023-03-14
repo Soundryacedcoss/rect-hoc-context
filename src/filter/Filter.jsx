@@ -65,16 +65,16 @@ export const Filter = () => {
           style={{
             display: "flex",
             flexWrap: "wrap",
-            columnGap:"3%",
+            columnGap: "3%",
             textAlign: "center",
             margin: "auto",
-            padding:"0 0% 0 5%"
+            padding: "0 0% 0 5%",
           }}
         >
           {product.product.map((val) => (
             <div
               className="Product_card"
-              style={{ margin: "2%"}}
+              style={{ margin: "2%" }}
               key={Math.random()}
             >
               <img src={val.thumbnail} alt="" className="Product_img" />
