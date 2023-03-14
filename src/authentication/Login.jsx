@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
 import { dataContaxt } from "../App";
 export const Login = () => {
   // ref for input box

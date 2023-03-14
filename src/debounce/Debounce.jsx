@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Hoc from "./Hoc";
 import "./Debounce.css";
-const Debounce = ({ Fetchchapi, user, setUser,loader }) => {
+const Debounce = ({ Fetchchapi, user, setUser, loader }) => {
   const [input, setInput] = useState("");
   useEffect(() => {
     // fetching data using debounce
     const fetchData = setTimeout(() => {
       if (input !== "") {
         Fetchchapi(input);
-        loader.setLoader(false)
+        loader.setLoader(false);
       }
     }, 2000);
     return () => clearInterval(fetchData);
@@ -16,15 +16,17 @@ const Debounce = ({ Fetchchapi, user, setUser,loader }) => {
   // serach Handler
   const SearhHanlder = (e) => {
     setInput(e.target.value);
-    loader.setLoader(true)
+    loader.setLoader(true);
     let temp = [];
     if (e.target.value === "") {
       user.setUser(temp);
-    loader.setLoader(false)
+      loader.setLoader(false);
     }
   };
   return (
     <>
+      <h2>Debounce</h2>
+      <h3>Search your github username</h3>
       <div className="debounce">
         <div
           className="input-group w-50"
@@ -33,7 +35,7 @@ const Debounce = ({ Fetchchapi, user, setUser,loader }) => {
           <input
             type="text"
             className="form-control w-25"
-            placeholder="Search userName"
+            placeholder="Search github username"
             aria-label="Username"
             aria-describedby="addon-wrapping"
             onChange={SearhHanlder}
@@ -41,7 +43,7 @@ const Debounce = ({ Fetchchapi, user, setUser,loader }) => {
         </div>
       </div>
       {user.user.length !== 0 ? (
-        <div className="contact mt-4">
+        <div className="contact mt-5">
           <div className="contact__detail">
             <div>
               <img

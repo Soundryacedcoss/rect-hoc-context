@@ -10,7 +10,6 @@ export const Cart = () => {
   const [Display, setDisplay] = useState();
   // Here i am using useNavigate for redirect to other page
   const navigate = useNavigate();
-  // Here i am checking that the user ois loged in or not
   // increase Button Functionaliy
   const IncreaseHandler = (val) => {
     for (let i = 0; i < productData.cartArr.length; i++) {

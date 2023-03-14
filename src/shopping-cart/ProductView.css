@@ -2,7 +2,6 @@
 #products {
   overflow: hidden;
 }
-
 #products .product {
   float: left;
   margin-bottom: 20px;
